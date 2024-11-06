@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 import time
 
 # Define MQTT broker details
-broker_hostname = "broker.emqx.io"  # Replace "localhost" with the actual broker IP if not running locally
+broker_hostname = "localhost"  # Replace with "localhost" for local Mosquitto broker
 port = 1883
 topic = "test/topic"
 
