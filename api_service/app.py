@@ -22,7 +22,10 @@ def home():
 @app.route('/api/data', methods=['GET'])
 def get_data():
     app.logger.info("GET request received at /api/data")
-    data = {"message": "This is a GET request response"}
+    data = {
+        "status" : "success",
+        "dateTime" : "18-12-2024 12:32"
+    }
     return jsonify(data)
 
 @app.route('/api/data', methods=['POST'])
@@ -32,5 +35,5 @@ def post_data():
     response = {"received": content}
     return jsonify(response), 201
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
